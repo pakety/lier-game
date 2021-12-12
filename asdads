@@ -1,1 +1,26 @@
-import random
+print('\n' * 50) #줄 맞추기
+print('1번부터 번호를 입력해주세요') #시작
+import random #차트 뽑기
+list = ['장소', '직업', '음식', '나라', '동물']
+Cate = random.choice(list)
+import random # 라이어 뽑기
+Party = [1, 2, 3, 4, 5]
+Lier = random.choice(Party)
+for i in range(5): #단어 확인 함수
+    x = int(input())
+    if x == Lier:
+       print("라이어 당첨!")
+       while True: #가리기
+           n = input('엔터키를 누르세요')
+           if n == '':
+             clearConsole = lambda: print('\n' * 50) 
+             clearConsole()
+             break;                 
+    else:
+       print(Cate)
+       while True: #가리기
+           n = input('엔터키를 누르세요')
+           if n == '':
+             clearConsole = lambda: print('\n' * 50)
+             clearConsole()
+             break;
