@@ -3,7 +3,6 @@ print('자신의 번호를 입력해주세요') #시작
 import random #차트 뽑기
 list = ['장소', '직업', '음식', '나라', '동물']
 Cate = random.choice(list)
-print(Cate)
 if Cate == '장소':
   import random #단어 뽑기
   a = ['도서관', '학교']
