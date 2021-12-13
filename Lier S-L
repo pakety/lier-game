@@ -1,0 +1,51 @@
+print('\n' * 50) #줄 맞추기
+print('1번부터 번호를 입력해주세요') #시작
+import random #차트 뽑기
+list = ['장소', '직업', '음식', '나라', '동물']
+Cate = random.choice(list)
+import random # 라이어 뽑기
+Party = [1, 2, 3, 4, 5]
+Lier = random.choice(Party)
+for i in range(5): #단어 확인 함수
+    x = int(input())
+    if x == Lier:
+       print("라이어 당첨!")
+       while True: #가리기
+           n = input('엔터키를 누르세요')
+           if n == '':
+             clearConsole = lambda: print('\n' * 50) 
+             clearConsole()
+             break;                 
+    else:
+       print(Cate)
+       while True: #가리기
+           n = input('엔터키를 누르세요')
+           if n == '':
+             clearConsole = lambda: print('\n' * 50)
+             clearConsole()
+             break;
+lier = Lier #라이어의 번호
+word = Cate #단어
+ch = int(input("라이어를 선택하세요\n")) #추측한 라이어 번호 입력받기
+if(1<=ch and ch <= 5): #추측한 라이어의 번호가 1에서 5사이인지
+  ch_1 = ch
+  if(ch_1 == lier): #추측한 번호가 라이어가 맞는지
+    if(word == input("라이어는 제시된 단어를 맞춰주세요\n")): #추측한 번호가 라이어일 경우
+      print("라이어 승리!") #라이어가 정답을 맞출 경우
+    else:
+      print("일반인 승리!") #라이어가 정답을 맞추치 못할 경우
+      print("라이어는", lier,"번이고 단어는", word,"이었습니다!")
+  else:
+    print("라이어 승리!") #추측한 번호가 라이어가 아닐 경우 
+    print("라이어는", lier,"번이고 단어는", word,"이었습니다!")
+else:
+  ch = int(input("1이상 5이하의 정수만 입력해주세요\n")) #추측한 라이어의 번호가 1에서 5사이가 아닐 경우 다시 입력 받기
+  if(ch == lier): #다시 입력 받고 검사
+    if(word == input("라이어는 제시된 단어를 맞춰주세요\n")):
+      print("라이어 승리!")
+    else:
+      print("일반인 승리!")
+      print("라이어는", lier,"번이고 단어는", word,"이었습니다!")
+  else:
+    print("라이어 승리!")
+    print("라이어는", lier,"번이고 단어는", word,"이었습니다!")
